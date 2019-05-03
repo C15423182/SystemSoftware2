@@ -180,8 +180,10 @@ void *ThreadClient(void *client_socket)
     printf("%s\n", details[2] );
     */
 
+    printf("before uploadclientfile\n");
     uploadclientfile(CID, clientID, details[1], details[2]);
 
+    /*
     check = ChangeServerEUID(0);
     if (check == FALSE)
     {
@@ -192,6 +194,8 @@ void *ThreadClient(void *client_socket)
     {
         printf("Server ID Reset\n");
     }
+    */
+    printf("CLOSING LOCK\n");
 
     pthread_mutex_unlock(&lock_x);
 
@@ -218,4 +222,5 @@ int ChangeServerEUID(int CID)
         return TRUE;
     }
     sleep(1);
+
 }

@@ -182,13 +182,13 @@ int file_exist (int CID, char filename[])
 		fclose(file);
 		check = TRUE; 
 		strcpy(msg,"{S} File Exists at Destination\n");
-	 	write(CID,msg,strlen(msg));
+	 	//write(CID,msg,strlen(msg));
 	}
 	else
 	{
 		check = FALSE;
 		strcpy(msg,"{S} File Doesnt Exists at Destination");
-	 	write(CID,msg,strlen(msg));
+	 	//write(CID,msg,strlen(msg));
 	}
 	return check;
 }
