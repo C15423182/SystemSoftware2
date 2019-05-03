@@ -96,11 +96,11 @@ void uploadclientfile (int CID, int ClientUID, char fp[], char dir_loc[])
 
     if (chown ("/tmp/server_temp.txt", ClientUID, ClientUID) == -1)
     { 
-    	printf("Chown Failed\n"); 
+    	printf("\n"); 
     } 
     else
     { 
-    	printf("Chown Success\n"); 
+    	printf("\n"); 
     } 
 
 	//printf("%s\n", CMD);
@@ -114,16 +114,7 @@ void uploadclientfile (int CID, int ClientUID, char fp[], char dir_loc[])
 	sleep(1);
 	
 	// file check
-	//transfer_check = file_exist(CID, "server_temp.txt");
-
-	if (transfer_check == TRUE)
-	{
-		printf("Transfer Success, File Exists\n");
-	}
-	else
-	{
-		printf("Transfer Failed, File Doesnt Exist\n");
-	}
+	transfer_check = file_exist(CID, "server_temp.txt");
 	
 }
 
