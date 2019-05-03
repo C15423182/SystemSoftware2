@@ -182,6 +182,7 @@ void *ThreadClient(void *client_socket)
 
     printf("before uploadclientfile\n");
     uploadclientfile(CID, clientID, details[1], details[2]);
+    resetID();
 
     /*
     check = ChangeServerEUID(0);
@@ -222,5 +223,15 @@ int ChangeServerEUID(int CID)
         return TRUE;
     }
     sleep(1);
+}
 
+void resetID()
+{
+    int rootID = 0;
+    setuid(rootID);
+    //setreuid((uid_t)rootID, uid);
+    //setregid((uid_t)rootID, gid);
+    seteuid(rootID);
+    setegid(rootID);
+    printf("Permissions Reset\n");
 }

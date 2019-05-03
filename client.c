@@ -61,7 +61,8 @@ int main (int argc, char *argv[])
 
 
     if (strcmp(DIR_DEST,"Sales") == 0 || strcmp(DIR_DEST,"Promotions") == 0 || 
-        strcmp(DIR_DEST,"Offers") == 0 || strcmp(DIR_DEST,"Root") == 0 || strcmp(DIR_DEST,"Sales") == 0)
+        strcmp(DIR_DEST,"Offers") == 0 || strcmp(DIR_DEST,"Root") == 0 || strcmp(DIR_DEST,"Marketing") == 0
+        || strcmp(DIR_DEST,"Test") == 0)
     {
         printf("Location Accepted\n");
     }

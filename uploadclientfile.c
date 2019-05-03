@@ -65,6 +65,11 @@ void uploadclientfile (int CID, int ClientUID, char fp[], char dir_loc[])
     	strcpy(DIR_DEST,"/var/www/html/intranet/Promotions/");
     	printf("Directory Destination: %s\n",DIR_DEST);	
     }
+    else if (strcmp(dir_loc,"Test") == 0 )
+    {
+        strcpy(DIR_DEST,"/var/www/html/intranet/Test/");
+        printf("Directory Destination: %s\n",DIR_DEST); 
+    }
     else
     {
     	printf("DIRECTORY NOT FOUND!\nEXITING");
@@ -83,11 +88,11 @@ void uploadclientfile (int CID, int ClientUID, char fp[], char dir_loc[])
     	printf("File Transfer Failed\n");
     }
 
-    /*
+    
     uid_t s_euid = geteuid();
     printf("euid %d\n" , s_euid);
     printf("id: %d\n", ClientUID);
-    */
+    
 
     if (chown ("/tmp/server_temp.txt", ClientUID, ClientUID) == -1)
     { 
