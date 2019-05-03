@@ -138,7 +138,7 @@ int main (int argc, char *argv[])
     }
 
     sleep(1);
-    /*
+    
     // recieve transfer completion or failure
     if(recv(SID,server_reply,strlen(server_reply),0 ) < 0)
     {
@@ -146,7 +146,7 @@ int main (int argc, char *argv[])
         //break;
     }
     printf("{S}: %s \n",server_reply );
-    */
+    
     //close socket
     close(SID);
     exit(EXIT_SUCCESS);;

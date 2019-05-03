@@ -182,20 +182,9 @@ void *ThreadClient(void *client_socket)
 
     printf("before uploadclientfile\n");
     uploadclientfile(CID, clientID, details[1], details[2]);
+    
     resetID();
 
-    /*
-    check = ChangeServerEUID(0);
-    if (check == FALSE)
-    {
-        printf("! Server didn't reset EID !\n");
-        exit(EXIT_FAILURE);
-    }
-    else
-    {
-        printf("Server ID Reset\n");
-    }
-    */
     printf("CLOSING LOCK\n");
 
     pthread_mutex_unlock(&lock_x);
